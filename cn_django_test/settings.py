@@ -122,3 +122,46 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+OAUTHLIB_INSECURE_TRANSPORT = '1'
+
+CORS_ALLOW_HEADERS = "*"
+
+CELERY_ACCEPT_CONTENT = ['application/json']
+CELERY_TASK_SERIALIZER = 'json'
+CELERY_RESULT_SERIALIZER = 'json'
+CELERY_TIMEZONE = 'Asia/Kolkata'
+
+
+CELERY_MAX_TASKS_PER_CHILD = 1
+
+CELERY_BROKER_URL = "redis://:admin@ec2-54-158-77-217.compute-1.amazonaws.com:6379"
+CELERY_RESULT_BACKEND = "redis://:admin@ec2-54-158-77-217.compute-1.amazonaws.com:6379"
+
+
+CACHES = {
+    "default": {
+        "BACKEND": "django_redis.cache.RedisCache",
+        "LOCATION": "redis://:admin@ec2-54-158-77-217.compute-1.amazonaws.com:6379",
+        "OPTIONS": {
+            "CLIENT_CLASS": "django_redis.client.DefaultClient",
+            "CONNECTION_POOL_KWARGS": {
+                "ssl_cert_reqs": None
+            },
+        }
+    }
+}
+# CELERY_BROKER_URL = "redis://localhost:6379/"
+# CELERY_RESULT_BACKEND = 'redis://localhost:6379/'
+# CELERY_TASK_RESULT_EXPIRES = 0
+
+
+# CACHES = {
+#     "default": {
+#         "BACKEND": "django_redis.cache.RedisCache",
+#         "LOCATION": "redis://127.0.0.1:6379/",
+#         "OPTIONS": {
+#             "CLIENT_CLASS": "django_redis.client.DefaultClient"
+#         },
+#         "KEY_PREFIX": "example"
+#     }
+# }
