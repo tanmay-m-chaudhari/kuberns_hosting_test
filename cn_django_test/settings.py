@@ -134,14 +134,15 @@ CELERY_TIMEZONE = 'Asia/Kolkata'
 
 CELERY_MAX_TASKS_PER_CHILD = 1
 
-CELERY_BROKER_URL = "redis://:admin@ec2-54-158-77-217.compute-1.amazonaws.com:6379"
-CELERY_RESULT_BACKEND = "redis://:admin@ec2-54-158-77-217.compute-1.amazonaws.com:6379"
+REDIS_URL = 'redis://:harsh@ec2-54-221-88-175.compute-1.amazonaws.com:6379'
+CELERY_BROKER_URL = REDIS_URL
+CELERY_RESULT_BACKEND = REDIS_URL
 
 
 CACHES = {
     "default": {
         "BACKEND": "django_redis.cache.RedisCache",
-        "LOCATION": "redis://:admin@ec2-54-158-77-217.compute-1.amazonaws.com:6379",
+        "LOCATION": REDIS_URL,
         "OPTIONS": {
             "CLIENT_CLASS": "django_redis.client.DefaultClient",
             "CONNECTION_POOL_KWARGS": {
