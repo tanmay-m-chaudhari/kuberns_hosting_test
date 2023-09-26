@@ -1,1 +1,1 @@
-web: gunicorn cn_django_test.wsgi:application --bind 0.0.0.0:9001
+web: gunicorn cn_django_test.wsgi:application --bind 0.0.0.0:8000
