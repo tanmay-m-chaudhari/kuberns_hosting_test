@@ -5,4 +5,4 @@ from .tasks import test_task
 
 def index(request):
     test_task.delay()
-    return HttpResponse('HHM.....Hello World! This is CN Django Test.By - Harsh Kanani aa.....web hooks test harsh kanani webhook testing abcdefghijklmnopqrstuvwxyz')
+    return HttpResponse('HHM.....Hello World! This is CN Django Test.By - Harsh Kanani aa.....web hooks test harsh kanani webhook testing')
