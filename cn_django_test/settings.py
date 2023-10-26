@@ -136,7 +136,7 @@ CELERY_TIMEZONE = 'Asia/Kolkata'
 
 CELERY_MAX_TASKS_PER_CHILD = 1
 
-# REDIS_URL = 'redis://:SdAcJvHk@123@ec2-3-110-193-173.ap-south-1.compute.amazonaws.com:6379'
+REDIS_URL = 'redis://:SdAcJvHk@123@ec2-3-110-193-173.ap-south-1.compute.amazonaws.com:6379'
 CELERY_BROKER_URL = REDIS_URL
 CELERY_RESULT_BACKEND = REDIS_URL
 
