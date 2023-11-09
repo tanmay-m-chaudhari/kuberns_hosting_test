@@ -20,5 +20,5 @@ app.config_from_object('django.conf:settings')
 # Load task modules from all registered Django app configs.
 app.autodiscover_tasks(settings.INSTALLED_APPS)
 
-app.conf.timezone = 'UTC'
+app.conf.timezone = 'UTC'  # 设置时区
 
