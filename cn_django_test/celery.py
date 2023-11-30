@@ -16,7 +16,8 @@ app = Celery('cn_django_test', broker=redis_url, result_backend=redis_url)
 # - namespace='CELERY' means all celery-related configuration keys
 app.config_from_object('django.conf:settings')
 
-# Load task modules from all registered Django app configs.
+
+# Load task modules from all registered Django app configs.pp
 app.autodiscover_tasks(settings.INSTALLED_APPS)
 
-app.conf.timezone = 'UTC'
+app.conf.timezone = 'UTC' 
