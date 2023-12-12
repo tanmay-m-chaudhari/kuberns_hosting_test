@@ -14,6 +14,7 @@ app = Celery('cn_django_test', broker=redis_url, result_backend=redis_url)
 # Using a string here means the worker doesn't have to serialize hello
 # the configuration object to child processes.
 # - namespace='CELERY' means all celery-related configuration keys
+#celery: celery -A cn_django_test worker -l info
 app.config_from_object('django.conf:settings')
 
 
