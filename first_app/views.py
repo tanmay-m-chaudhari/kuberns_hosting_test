@@ -5,7 +5,7 @@ from django.http import HttpResponse
 
 def index(request):
 
-    for i in range(1, 10000000):
+    for i in range(1, 100000):
         print("hello world")
 
     return HttpResponse(f'HHM.....Hello World! This is CN Django Test.By - Harsh Kanani aa.....web hooks test harsh kanani webhook testing 123456789 hello hi ')
