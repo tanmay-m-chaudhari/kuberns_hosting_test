@@ -8,7 +8,7 @@ from django.http import HttpResponse
 def index(request):
     # Create a large list to increase RAM usage
     large_list = []
-    for i in range(1000000):
+    for i in range(100000):
         large_list.append("hello world" * 1000)  # Create a large string and append to the list
 
     # Just to ensure the list is being used and not optimized away
