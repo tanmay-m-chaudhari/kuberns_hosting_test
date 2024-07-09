@@ -14,6 +14,6 @@ def index(request):
     total_length = sum(len(s) for s in large_list)
     
 
-    print(qwe)
+print(qwe)
 
     return HttpResponse(f'HHM.....Hello World! This is CN Django Test.By - Harsh Kanani aa.....web hooks test harsh kanani webhook testing 123456789 hello hi. Total length of strings: {total_length}')
